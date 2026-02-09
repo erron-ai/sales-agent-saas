@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sales-agent-saas"
+version = "0.1.0"
+description = "Sales automation SaaS template with leads, scoring, outreach, and CRM sync."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "erron.ai"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/erron-ai/sales-agent-saas"
+Issues = "https://github.com/erron-ai/sales-agent-saas/issues"
+
+[project.scripts]
+sales-agent-saas = "sales_agent_saas.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
